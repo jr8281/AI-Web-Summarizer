@@ -93,8 +93,8 @@ Raw HTML is notoriously noisy. To preserve context limits and keep latency low:
 
 ```bash
 # Clone the repository
-git clone https://github.com/‹your-username›/ai-website-summarizer.git
-cd "ai-website-summarizer"
+git clone https://github.com/‹jr8281›/Ai-Web-Summarizer.git
+cd "Ai-Website-Summarizer"
 
 # Create and activate virtual environment
 python -m venv .venv
@@ -167,7 +167,6 @@ AI Web Summarizer/
 │   └── index.html         # Single-page UI with terracotta styling & robot loader
 ├── Web Summarizer.ipynb   # Jupyter notebook used for initial prototyping & prompt tuning
 ├── README.md              # Project documentation
-└── README (2).md          # Portfolio style reference
 ```
 
 ## Design Decisions
@@ -189,10 +188,3 @@ AI Web Summarizer/
 - **Constrained JSON Outputs:** Using `response_format={"type": "json_object"}` with Groq guarantees reliable parsing for multi-step agentic workflows without brittle regex post-processing.
 - **User Experience During Multi-Step Latency:** Because multi-page scraping involves multiple sequential HTTP requests followed by LLM inference, transparent UI states (loading animations, informative progress indicators, and disable states) prevent users from double-submitting or abandoning requests.
 
-## Future Improvements
-
-- **Headless Browser Fallback:** Integrate Playwright or Selenium to scrape dynamic single-page applications (SPAs).
-- **Asynchronous Concurrent Scraping:** Fetch target sub-pages concurrently via `httpx` or `asyncio.gather` instead of sequentially to reduce total latency.
-- **Streaming Responses (SSE):** Stream generated brochure tokens in real time to the frontend via Server-Sent Events.
-- **PDF & Markdown Download:** Provide a formatted PDF export of the generated company brochure.
-- **History & Caching:** Implement SQLite/Redis caching to instantly return previously summarized websites.
