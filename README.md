@@ -9,7 +9,7 @@ Transform any company or product website into an investor- and candidate-ready e
 
 | Website Input & Intelligent Analysis | Structured Brochure-Style Summary |
 |---|---|
-| ![Input & Quick Access UI](frontend/screenshot_home.png) | ![Generated AI Brochure Result](frontend/screenshot_result.png) |
+| ![Input & Quick Access UI](AI%20Web%20Summarizer/frontend/screenshot_home.png) | ![Generated AI Brochure Result](AI%20Web%20Summarizer/frontend/screenshot_result.png) |
 
 ## Why this project
 
@@ -118,8 +118,8 @@ GROQ_API_KEY=gsk_your_actual_groq_api_key_here
 ### 4. Run the Server
 
 ```bash
-# Start FastAPI with Uvicorn
-python -m uvicorn app:app --reload --host 0.0.0.0 --port 8000
+# Start FastAPI with Uvicorn from the repository root
+python -m uvicorn "AI Web Summarizer.app:app" --reload --host 0.0.0.0 --port 8000
 ```
 
 Open your browser at **`http://localhost:8000`** to interact with the web interface, or visit **`http://localhost:8000/docs`** for interactive Swagger documentation.
